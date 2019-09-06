@@ -146,6 +146,7 @@ body {
 .intro {
   background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(244, 242, 242, 0.2))), url(./img/intro.jpg);
   background-image: linear-gradient(to right bottom rgba(244, 242, 242, 0.3), rgba(244, 242, 242, 0.2)), url(./img/intro.jpg);
+  background-repeat: no-repeat;
   background-size: 70% 100%;
   background-position: 30vw 0%;
   grid-column: full-start/full-end;
