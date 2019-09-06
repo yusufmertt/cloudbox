@@ -167,6 +167,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit , minmax(250px,1fr));
     .feature{
+        border: .1px solid $grey-dark-1;
         padding: 2rem 2rem;
         transition: .2s all;
         background-color: $grey-light-2;

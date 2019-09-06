@@ -285,6 +285,7 @@ body {
 }
 
 .features .feature {
+  border: 0.1px solid #3f3f3f;
   padding: 2rem 2rem;
   -webkit-transition: .2s all;
   transition: .2s all;
