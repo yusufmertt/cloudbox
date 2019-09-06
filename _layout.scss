@@ -1,0 +1,357 @@
+.header{
+    grid-column: center-start/ center-end;
+    display: grid;
+    grid-template-columns: min-content minmax(5rem,1fr) minmax(4rem,max-content) min-content;
+    margin-top: 1rem;
+    .logo{
+        height: 7rem;
+        width: 11rem;
+    }
+    &__list{
+        align-self: center;
+        justify-self: right;
+        list-style-type: none;
+        font-size: 1.7rem;
+        &--item{
+            margin-left: 2rem;
+            display: inline-block;
+            font-weight: 100;
+        }
+        &--link{
+            text-decoration: none;
+            color: $grey-dark-1;
+            &:hover,
+            &:active{
+                color: $primary-dark-3;
+            }
+        }
+    }
+    .user{
+        font-size: 1.7rem;
+        justify-self: right;
+        position: relative;
+        &__list{
+         list-style-type: none;
+        
+        }
+        &__item{
+            font-weight: 100;
+        }
+        &__link{
+            font-weight: 100;
+            color: $grey-dark-1;
+            text-decoration: none;
+            &:hover,
+            &:active{
+                color: $primary-dark-3;
+            }
+        }
+        &__icon{
+            width: 2rem;
+            height: 2rem;
+            
+            &-box{
+               justify-self: center;
+                align-self: center;
+                margin-left: .7rem;
+            }
+        }
+    }
+}
+.intro{
+
+    background-image: linear-gradient(to right bottom rgba($grey-light-2,.3) , rgba($grey-light-2,.2)) , url(./img/intro.jpg);
+    
+    background-size: 70% 100% ;
+    background-position: 30vw 0%;
+
+    grid-column: full-start/full-end;
+
+    margin-top: 2rem;
+
+    display: grid;
+    grid-template-columns:minmax(4rem,.4fr) minmax(5rem,1.3fr) minmax(5rem,1.4fr);
+    height: 80vh;
+    .header-2{
+        font-size: 3rem;
+    }
+    &__list{
+        list-style-type: none;
+    }
+    &__list--item{
+        font-size: 2.2rem;
+        margin-top: .5rem;
+        color:$grey-dark-1;
+    }
+    &__content{
+        grid-column: 1/3;
+
+        background-image: linear-gradient(to right ,rgba($primary, 1) 40%, rgba($primary-dark-2,.7));
+        clip-path: polygon(0% 0, 100% 0%, 75% 100%, 0% 100%);
+        display: grid;
+        grid-template-columns: minmax(4rem,.2fr) minmax(min-content,1fr) minmax(4rem,.2fr);
+        align-items: center;
+        &--inner{
+            grid-column: 2/3;
+            margin-bottom: 5rem;
+
+        }
+    }
+}
+.pricing{
+    margin-top: 8rem;
+    grid-column: center-start/ center-end;
+    background-color: transparent;
+    display: grid;
+    grid-template-columns: minmax(4rem,.2fr)[center-start]repeat(3, minmax(min-content,1fr))[center-end] minmax(4rem,.2fr);
+    .cards{
+      grid-column: center-start / center-end;
+      display: grid;
+      grid-template-columns: repeat(auto-fit , minmax(200px,1fr));
+      grid-row-gap: 5rem;
+      grid-column-gap: 8rem;
+    }
+    .card{
+        &:hover{
+            background-color: $grey-light-4;
+            cursor: pointer;
+        }
+        border-radius: 5px;
+        letter-spacing: 1.3px;
+        background-color: $grey-light-2;
+        padding: 6rem 3rem;
+        box-shadow: 0px 0px 21px 1px rgba(0,0,0,0.75);
+        font-weight: 100;
+        transition: .2s all;
+        &__header{
+            text-align: center;
+            color: rgb(54, 54, 54);
+            font-size: 2rem;
+            &--price{
+                font-size: 1.5rem;
+                font-weight: 100;
+                &-link{
+                    text-decoration: none;
+                    color:$grey-dark-2;
+                    &:hover{
+                        color: $grey-dark-1;
+                    }
+                }
+            }
+        }
+        &__list{
+            font-size: 1.7rem;
+            margin-bottom: 3rem;
+            line-height: 2.2rem;
+
+        }
+        &__list-item{
+            margin-bottom: 1rem;
+            color: $grey-dark-1;
+        }
+        &__input{
+            display: none;
+        }
+    }
+    
+}
+////////////////////////////
+.card__input:checked ~ .card {
+    transform: scale(1.1);
+    background-image: linear-gradient(to right bottom, $primary , $primary-dark-2);
+    
+}
+///////////////////////////
+.features{
+    grid-column: full-start/ full-end;
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(250px,1fr));
+    .feature{
+        padding: 2rem 2rem;
+        transition: .2s all;
+        background-color: $grey-light-2;
+        &:hover{
+            transform: scale(1.1);
+        }
+        &__header{
+            text-transform: uppercase;
+            font-size: 1.7rem;
+            text-align: center;
+            font-weight: 600;
+            letter-spacing: 1.6px;
+
+        }
+        &__content{
+            color: rgb(41, 41, 41);
+            font-size: 1.6rem;
+            text-align: center;
+            font-weight: 100;
+            letter-spacing: 1.3px;
+            line-height: 2.2rem;
+        }
+        &__icon{
+            margin-top: 1rem;
+            height: 6rem;
+            fill: rgb(53, 53, 53);
+            &-box{
+                display: flex;
+            }
+        }
+        &__support{
+            background-image:linear-gradient(rgba($primary-dark-2,.8) , rgba($primary,.8)) ,url(./img/online-support.jpg);
+            background-size: cover;
+        }
+        &__server{
+            background-image:linear-gradient(rgba($primary-dark-2,.8) , rgba($primary,.8)) ,url(./img/server.jpg);
+            background-size: cover;    
+        }
+        &__cloud{
+            background-image:linear-gradient(rgba($primary-dark-2,.8) , rgba($primary,.8)) ,url(./img/server-2.jpg);
+            background-size: cover;  
+        }
+        &__happy{
+            background-image:linear-gradient(rgba($primary-dark-2,.8) , rgba($primary,.8)) ,url(./img/happy.jpg);
+            background-size: cover;  
+
+        }
+    }
+
+}
+.team{
+    grid-column: center-start/ center-end;
+
+}
+
+.footer{
+    background-color: $primary-dark-3;
+    grid-column: full-start/full-end;
+    margin-top: 7rem;
+    &__list{
+        font-size: 1.5rem;
+        list-style-type: none;
+        margin: 3rem 0;
+        padding-left: 0 !important;
+
+        display: grid;
+        grid-template-columns: repeat(auto-fit , minmax(200px,1fr));
+    }
+    
+    &__list--link{
+        text-decoration: none;
+        color: rgb(53, 53, 53);
+        justify-self: center;
+        padding: 2rem 5rem;
+        transition: .3s all;
+        &:hover{
+            color:black;
+            background-color: rgba(189, 189, 189, 0.308);
+            transform: translateY(-4px);
+        }
+    }
+    &__copyright{
+        font-size: 1.3rem;
+        font-weight: 100;
+        text-align: center;
+        margin: 3rem 10rem;
+    }
+}
+
+
+.nav {
+    display: none;
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: #111;
+	opacity: .9;
+	overflow-x: hidden;
+	padding-top: 20px;
+	transition: 0.7s;
+}
+.nav a {
+	display: block;
+	padding: 20px 30px;
+	text-decoration: none;
+	color: #ccc;
+}
+.nav a:hover {
+	color: #fff;
+	transition: 0.4s;
+}
+.nav .close {
+	position: absolute;
+	top: 0;
+	right: 22px;
+	margin-left: 50px;
+	font-size: 30px
+}
+.slide a {
+	color: #000;
+	font-size: 36px;
+}
+#content {
+	padding: 20px;
+	transition: margin-left 0.7s;
+	overflow: hidden;
+	width: 100%;
+}
+
+.download{
+    grid-column: center-start/center-end;
+    display: grid;
+    grid-template-columns: .1fr 1fr .1fr;
+    justify-content: center;
+    margin-bottom: 6rem;
+    .header-3{
+        margin-top: 3.5rem;
+        font-size: 2rem;
+        text-align: center;
+        grid-column: 2/3;
+        text-transform: uppercase;
+        color: $grey-dark-1;
+        letter-spacing: 1.3px;
+    }
+    &__list{
+        list-style-type: none;
+        display: flex;
+        justify-content: space-around;
+    }
+    &__item{
+        margin-top: 4rem;
+        font-size: 2rem;
+        display: inline-block;
+    }
+    &__link{
+        font-size: 1.8rem;
+        text-decoration: none;
+        color: $grey-dark-1;
+        border:1px solid black;
+        padding: 1.5rem 3rem;
+        border-radius: 10px;
+        box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.75);
+        transition: .3s all;
+        &:hover{
+            
+            transform: translateY(-3px) scale(1.05);
+            background-color: $primary;
+        }
+        &:active{
+            transform: translateY(-1px);
+        }
+    }
+}
+.downloads{
+    margin-top: 2rem;
+    grid-column: 1/-1;
+}
+.header-4{
+    text-align: center;
+    font-size: 1.7rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 100;
+    font-weight: 500;
+}

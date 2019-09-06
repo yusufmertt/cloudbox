@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CloudBox | Yusuf Mert Çakmak </title>
+    <link rel="stylesheet" href="./main.css">
+    <link href="https://fonts.googleapis.com/css?family=Livvic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="shortcut icon" type="image/x-icon" href="./img/logo.png">
+
+</head>
+
+<body class="container">
+    <script>
+        function openSlideMenu(){
+          document.getElementById('menu').style.width = '250px';
+          document.getElementById('content').style.marginLeft = '250px';
+        }
+        function closeSlideMenu(){
+          document.getElementById('menu').style.width = '0';
+          document.getElementById('content').style.marginLeft = '0';
+        }
+      </script>
+        <span class="slide">
+            <a href="#" onclick="openSlideMenu()">
+              <i class="fa fa-bars" style="display: none;"></i>
+            </a>
+          </span>
+      
+          <div id="menu" class="nav">
+            <a href="#" class="close" onclick="closeSlideMenu()">
+              <i class="fa fa-times"></i>
+            </a>
+            <a href="#">Home</a>
+            <a href="#downloads">Downloads</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#footer">About</a>
+            <a href="https://yusufmert.netlify.com" target="_blank">Contact</a>
+            <a href="#">Sign In</a>
+            <a href="#">Sign Up</a>
+          </div>
+      
+    <header class="header" style="background-color: transparent">
+        <a href="#"><img src="./img/logo.PNG" alt="logo" class="logo"></a>
+        <ul class="header__list">
+            <li class="header__list--item"><a href="#" class="header__list--link">Download</a></li>
+            <li class="header__list--item"><a href="#" class="header__list--link">Pricing</a></li>
+          <!--  <li class="header__list--item"><a href="#" class="header__list--link">Our Team</a></li> -->
+        </ul>
+        <div class="user">
+            
+            <ul class="user__list">
+                <li class="user__item"><a href="#" class="user__link">Sign In</a></li>
+                <li class="user__item"><a href="#" class="user__link">Sign Up</a></li>
+            </ul>
+        </div>
+        <span class="user__icon-box"><svg class="icon icon-user user__icon"><use xlink:href="./img/symbol-defs.svg#icon-user"></use></svg></span>
+
+    </header>
+    <section class="intro">
+        <div class="intro__content">
+            <div class="intro__content--inner">
+                <h2 class="header-2">Get Your Drive Now</h2>
+                <div class="intro__list">
+                        <div class="intro__list--item">&#10004; Keep your data safe</div>
+                        <div class="intro__list--item">&#10004; Sync with all your devices</div>
+                        <div class="intro__list--item">&#10004; Take your data always with you</div>
+                        <div class="intro__list--item">&#10004; If you need help our team is working 24/7</div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    <section class="download" id="download">
+        <h3 class="header-3">Downloads</h3>
+        <div class="downloads">
+            
+            <h4 class="header-4">Desktop Versions</h4>
+            <ul class="download__list">
+                <a href="#" class="download__item download__link">Windows 7,8,10      <i class="fa fa-windows"></i></a>
+                <a href="#" class="download__item download__link">MacOS X 10.7+     <i class="fa fa-apple"></i></a>
+                <a href="" class="download__item download__link">Ubuntu 14.4.5+     <i class="fa fa-linux"></i></a>
+            </ul>
+        </div>
+        <div class="downloads">
+            <h4 class="header-4">Mobile Versions</h4>
+            <ul class="download__list">
+                <a href="" class="download__item download__link">Android 5.0+    <i class="fa fa-android"></i></a>
+                <a href="" class="download__item download__link" style="padding: 1.5rem 4.5rem">iOS 7.0+   <i class="fa fa-apple"></i></a>
+            </ul>
+        </div>
+    </section>
+    <section class="features">
+        <div class="feature  feature__support">
+            <div class="feature__icon-box"><svg class="icon feature__icon"><use xlink:href="./img/symbol-defs.svg#icon-users"></use></svg></div>
+            <h3 class="feature__header">24/7 Online Support</h3>
+            <p class="feature__content">Our online support team is in your service 7 days 24 hours</p>
+        </div>
+        <div class="feature feature__server">
+            <div class="feature__icon-box"><svg class="icon feature__icon"><use xlink:href="./img/symbol-defs.svg#icon-rocket"></use></svg></div>
+            <h3 class="feature__header">High Speed Servers</h3>
+            <p class="feature__content">Our high speed servers can handle thousends  of requests in a second. </p>
+        </div>
+        <div class="feature feature__cloud">
+            <div class="feature__icon-box"><svg class="icon  feature__icon"><use xlink:href="./img/symbol-defs.svg#icon-cloud-check"></use></svg></div>
+            <h3 class="feature__header">Access your files everywhere</h3>
+            <p class="feature__content">Synchronize your data and take them wherever you go. On your mobile phone, tablet, laptop...</p>
+        </div>
+        <div class="feature feature__happy">
+            <div class="feature__icon-box"><svg class="icon  feature__icon"><use xlink:href="./img/symbol-defs.svg#icon-happy"></use></svg></div>
+            <h3 class="feature__header">Customer Satisfaction</h3>
+            <p class="feature__content" style="font-weight: 600; background:linear-gradient(to right ,#d200b6 , #9300ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; ">
+                Your pleasure is our priority.</p>
+        </div>
+    </section>
+    <section class="pricing" id="pricing">
+        <div class="cards">
+            <label for="1">
+            <input class="card__input"type="radio" name="card" id="1">    
+            <div class="card card-1" style="padding-bottom: 4rem">
+                
+                <h4 class="card__header">10 GB / <span class="card__header--price">0$</span></h4>
+                <ul class="card__list">
+                    <li class="card__list-item">10GB Space</li>
+                    <li class="card__list-item">Sync Devices</li>
+                    <li class="card__list-item">Free Forever</li>
+                    <li class="card__list-item">No Credit Card Required</li>
+                </ul>
+                
+            </div>
+             </label>
+            <label for="2">      
+            <input class="card__input"type="radio" name="card" id="2">    
+            <div class="card card-2">
+                    <h4 class="card__header">100 GB / <span class="card__header--price">6$</span></h4>
+                    <ul class="card__list">
+                        <li class="card__list-item">100GB Space</li>
+                        <li class="card__list-item">Sync Devices</li>
+                        <li class="card__list-item">Monthly Plan</li>
+                        <li class="card__list-item">Online Support</li>
+                    </ul>
+                </div>
+            </label>
+            <label for="3">
+            <input class="card__input"type="radio" name="card" id="3">            
+            <div class="card card-3">
+                
+                <h4 class="card__header">250 GB / <span class="card__header--price">10$</span></h4>
+                <ul class="card__list">
+                    <li class="card__list-item">10GB Space</li>
+                    <li class="card__list-item">Sync Devices</li>
+                    <li class="card__list-item">Monthly Plan</li>
+                    <li class="card__list-item">Online Support</li>
+                </ul>
+                
+            </div>
+            </label>
+
+            <label for="4">
+                
+                    <input class="card__input"type="radio" name="card" id="4">    
+            <div class="card card-4">
+                
+                <h4 class="card__header">1 TB / <span class="card__header--price">50$</span></h4>
+                <ul class="card__list">
+                    <li class="card__list-item">10GB Space</li>
+                    <li class="card__list-item">Sync Devices</li>
+                    <li class="card__list-item">Monthly Plan</li>
+                    <li class="card__list-item">Online Support</li>
+                </ul>
+            </div>
+            </label>
+        <label for="5">
+            
+                <input class="card__input"type="radio" name="card" id="5">    
+            <div class="card card-5">
+                <h4 class="card__header">5TB / <span class="card__header--price">300$</span></h4>
+                <ul class="card__list">
+                    <li class="card__list-item">10GB Space</li>
+                    <li class="card__list-item">Sync Devices</li>
+                    <li class="card__list-item">Monthly Plan</li>
+                    <li class="card__list-item">Voice Support</li>
+                </ul>
+            </div>
+        </label>
+        <label for="6">
+                <input class="card__input"type="radio" name="card" id="6">    
+
+            <div class="card">
+                <h4 class="card__header">5 TB+ / <a class="card__header--price card__header--price-link" href="#">Contact Us</a></h4>
+                <ul class="card__list">
+                    <li class="card__list-item">10GB Space</li>
+                    <li class="card__list-item">Sync Devices</li>
+                    <li class="card__list-item">Monthly Plan</li>
+                    <li class="card__list-item">Voice Support</li>
+                </ul>
+            </div>
+        
+        </div>
+    </label>
+    </section>
+    
+    <section class="team"></section>
+    <footer class="footer">
+        <ul class="footer__list">
+            <a href="#pricing" class="footer__list--link">Pricing</a>
+            <a href="#" class="footer__list--link">Copyrigt</a>
+            <a href="#" class="footer__list--link">Work With Us</a>
+            <a href="https://yusufmert.netlify.com" target="_blank" class="footer__list--link">Contact Us</a>
+            <a href="https://yusufmert.netlify.com" target="_blank" class="footer__list--link">Creator</a>
+        </ul>
+        <p class="footer__copyright">Built by Yusuf Mert Çakmak. Copyright © by Yusuf Mert Çakmak. You are 100% allowed to use this webpage for both personal and commercial use, but NOT to claim it as your own design. A credit to the original author, Yusuf Mert Çakmak, is of course highly appreciated!</p>
+    </footer>
+</body>
+</html>

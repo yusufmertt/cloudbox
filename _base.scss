@@ -1,0 +1,76 @@
+$primary:#3ec4ef;
+$primary-light:#42d0ff;
+$primary-dark-1:#3cacd0;
+$primary-dark-2:#3bb8e0;
+$primary-dark-3:#3296b6;
+
+$grey-light-2: #f4f2f2;
+$grey-light-3: #f0eeee;
+$grey-light-4: #ccc;
+
+$grey-dark-1: rgb(63, 63, 63);
+$grey-dark-2: #777;
+$grey-dark-3: #999;
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Livvic', sans-serif;
+    background-color: #f3f5f7;
+
+}
+body{
+    font-size: 62.5%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Livvic', sans-serif;
+
+
+}
+.container{
+    display: grid;
+    grid-template-columns:[full-start] minmax(4rem,1fr) //min 60px of margin
+    [center-start] repeat(8, [col-start] minmax(min-content , 14rem)[col-end]) [center-end]
+    minmax(4rem,1fr) [full-end];
+  
+}
+@media only screen and (max-width: 800px) {
+    html{
+        font-size: 50%;
+    }
+    .intro{
+        margin-top: 0rem !important;
+        grid-template-rows: 1fr;
+        height: 80vh !important;
+        &__content{
+            grid-column: 1/-1 !important; 
+            margin-bottom: -3rem;
+            clip-path: none !important;
+            background-image: linear-gradient(to right ,rgba($primary, 1) 20%, rgba($primary-dark-2,.7)) !important;
+
+        }
+    }
+    .header{
+        display: none !important;
+    }
+    .nav{
+        display: inline-block !important;
+        font-size: 2rem !important;
+    }
+    .fa{
+        display: inline-block !important;
+        position: fixed !important;
+        margin: 2rem 2rem;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .download{
+        
+        &__list{
+            display: inline-block !important;
+        }
+    }
+}
