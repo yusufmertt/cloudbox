@@ -301,7 +301,7 @@
 }
 
 .download{
-    grid-column: center-start/center-end;
+    grid-column: full-start/full-end;
     display: grid;
     grid-template-columns: .1fr 1fr .1fr;
     justify-content: center;
@@ -317,11 +317,13 @@
     }
     &__list{
         list-style-type: none;
-        display: flex;
-        justify-content: space-around;
+        display: flex !important;
+        justify-content: center;
+        padding: 0 0 !important;
     }
     &__item{
         margin-top: 4rem;
+        margin-right:1rem; 
         font-size: 2rem;
         display: inline-block;
     }
@@ -345,8 +347,11 @@
     }
 }
 .downloads{
+    
     margin-top: 2rem;
     grid-column: 1/-1;
+    
+    
 }
 .header-4{
     text-align: center;

@@ -45,11 +45,13 @@ body{
         margin-top: 0rem !important;
         grid-template-rows: 1fr;
         height: 80vh !important;
+        background-image: none !important;
+       
         &__content{
             grid-column: 1/-1 !important; 
             margin-bottom: -3rem;
             clip-path: none !important;
-            background-image: linear-gradient(to right ,rgba($primary, 1) 20%, rgba($primary-dark-2,.7)) !important;
+            background-image: linear-gradient(to right bottom ,rgba($primary, 1) 20%, rgba($primary-dark-3,1)) !important;
 
         }
     }
@@ -62,8 +64,10 @@ body{
     }
     .fa{
         display: inline-block !important;
-        position: fixed !important;
         margin: 2rem 2rem;
+        &-bars{
+            position: fixed !important;
+        }
     }
 }
 @media only screen and (max-width: 800px) {
@@ -71,6 +75,9 @@ body{
         
         &__list{
             display: inline-block !important;
+        }
+        &__item{
+            margin-right: 0 !important; 
         }
     }
 }

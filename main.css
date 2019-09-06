@@ -35,14 +35,15 @@ body {
     -ms-grid-rows: 1fr;
         grid-template-rows: 1fr;
     height: 80vh !important;
+    background-image: none !important;
   }
   .intro__content {
     grid-column: 1/-1 !important;
     margin-bottom: -3rem;
     -webkit-clip-path: none !important;
             clip-path: none !important;
-    background-image: -webkit-gradient(linear, left top, right top, color-stop(20%, #3ec4ef), to(rgba(59, 184, 224, 0.7))) !important;
-    background-image: linear-gradient(to right, #3ec4ef 20%, rgba(59, 184, 224, 0.7)) !important;
+    background-image: -webkit-gradient(linear, left top, right bottom, color-stop(20%, #3ec4ef), to(#3296b6)) !important;
+    background-image: linear-gradient(to right bottom, #3ec4ef 20%, #3296b6) !important;
   }
   .header {
     display: none !important;
@@ -53,14 +54,19 @@ body {
   }
   .fa {
     display: inline-block !important;
-    position: fixed !important;
     margin: 2rem 2rem;
+  }
+  .fa-bars {
+    position: fixed !important;
   }
 }
 
 @media only screen and (max-width: 800px) {
   .download__list {
     display: inline-block !important;
+  }
+  .download__item {
+    margin-right: 0 !important;
   }
 }
 
@@ -447,7 +453,7 @@ body {
 }
 
 .download {
-  grid-column: center-start/center-end;
+  grid-column: full-start/full-end;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: .1fr 1fr .1fr;
@@ -472,15 +478,18 @@ body {
 
 .download__list {
   list-style-type: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 0 !important;
 }
 
 .download__item {
   margin-top: 4rem;
+  margin-right: 1rem;
   font-size: 2rem;
   display: inline-block;
 }
